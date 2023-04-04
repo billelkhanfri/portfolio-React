@@ -1,0 +1,17 @@
+// main.scss
+@font-face {
+  font-family: "Montserrat";
+  src: url("~/public/assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+}
+@import "variables";
+@import "../common/styles/common.scss";
+@import "../home/styles/home.scss";
+@import "../projects/styles/projects.scss";
+@import "../about/styles/about.scss";
+@import "../contact/styles/contact.scss";
+@import "../auth/styles/auth.scss";
+body {
+  font-family: $body-font-family;
+  border: 2px solid red;
+}

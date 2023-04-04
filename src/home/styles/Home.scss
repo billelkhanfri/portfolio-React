@@ -1,0 +1,71 @@
+@import "../../styles/variables.scss";
+
+.skewed {
+  display: flex;
+  justify-content: space-between;
+  //border: 5px solid;
+  //border-color: transparent green green green;
+  color: white;
+}
+.text {
+  width: 46%;
+  background-color: black;
+}
+.intro {
+  text-align: left;
+  width: 79%;
+  margin: 180px -50px 76px 100px;
+
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .icons {
+    margin-top: 60px;
+    .icon {
+      font-size: 2em;
+      margin-right: 10px;
+    }
+
+    .github {
+      color: yellow;
+    }
+
+    .linkedin {
+      color: yellow;
+    }
+  }
+}
+.image {
+  width: 60%;
+  height: 600px;
+  position: relative;
+  background: var(--primary-color);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  img {
+    width: 450px;
+  }
+}
+.image::before {
+  content: "";
+  position: absolute;
+  left: -1.58em;
+  top: 50%;
+  transform: translateY(-50%) rotate(5deg);
+  background: black;
+  width: 10%;
+  height: 140%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border: 12px solid;
+  border-color: transparent green transparent transparent;
+}
