@@ -50,10 +50,16 @@
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: flex-end;
   img {
-    width: 450px;
+    width: 350px;
+  }
+  .text-img {
+    position: relative;
+    top: -450px;
+    left: 100px;
+    color: black;
   }
 }
 .image::before {

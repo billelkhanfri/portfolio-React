@@ -1,7 +1,5 @@
-// ColorsContent.js
-
-import React, { useState } from "react";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const ColorBullets = styled.div`
   display: flex;
@@ -16,23 +14,65 @@ const Bullet = styled.div`
   background-color: ${(props) => props.color};
   margin: 0 5px;
   cursor: pointer;
+  opacity: ${(props) => (props.active ? 1 : 0.3)};
+  border: ${(props) => (props.active ? "1px solid gray " : " none")};
 `;
 
 function ColorsContent(props) {
-  const [primaryColor, setPrimaryColor] = useState("#ff9800");
+  const [activeBullet, setActiveBullet] = useState(0);
 
-  const handleClick = (color) => {
-    setPrimaryColor(color);
+  const handleClick = (index, color) => {
     document.documentElement.style.setProperty("--primary-color", color);
+    localStorage.setItem("primaryColor", color);
+    setActiveBullet(index);
   };
+
+  useEffect(() => {
+    const savedColor = localStorage.getItem("primaryColor");
+    if (savedColor) {
+      document.documentElement.style.setProperty("--primary-color", savedColor);
+      // find the index of the savedColor in the array of bullets
+      const index = [
+        "#FF9800",
+        "#0074D9",
+        "#FFDC00",
+        "#2ECC40",
+        "#FF4136",
+      ].indexOf(savedColor);
+      if (index > -1) {
+        setActiveBullet(index);
+      }
+    }
+  }, []);
 
   return (
     <div>
       <ColorBullets>
-        <Bullet color="#FF4136" onClick={() => handleClick("#FF4136")} />
-        <Bullet color="#0074D9" onClick={() => handleClick("#0074D9")} />
-        <Bullet color="#FFDC00" onClick={() => handleClick("#FFDC00")} />
-        <Bullet color="#2ECC40" onClick={() => handleClick("#2ECC40")} />
+        <Bullet
+          color="#FF9800"
+          active={activeBullet === 0}
+          onClick={() => handleClick(0, "#FF9800")}
+        />
+        <Bullet
+          color="#0074D9"
+          active={activeBullet === 1}
+          onClick={() => handleClick(1, "#0074D9")}
+        />
+        <Bullet
+          color="#FFDC00"
+          active={activeBullet === 2}
+          onClick={() => handleClick(2, "#FFDC00")}
+        />
+        <Bullet
+          color="#2ECC40"
+          active={activeBullet === 3}
+          onClick={() => handleClick(3, "#2ECC40")}
+        />
+        <Bullet
+          color="#FF4136"
+          active={activeBullet === 4}
+          onClick={() => handleClick(4, "#FF4136")}
+        />
       </ColorBullets>
     </div>
   );

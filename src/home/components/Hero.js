@@ -23,8 +23,14 @@ function Hero() {
           </div>
         </div>
         <div className="image">
+          <div className="text-img">
+            <h2>
+              &lt;&gt; <br /> Bringing Designs to life <br />
+              &lt;/&gt;
+            </h2>
+          </div>
+
           <img src={Billel} alt=" person with glasses" />
-          <div></div>
         </div>
       </div>
     </Container>
