@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/common.scss";
 import { NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navigation() {
   return (
@@ -28,9 +29,7 @@ function Navigation() {
         </li>
       </ul>
       <button className="toggle-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <GiHamburgerMenu className="menu"></GiHamburgerMenu>
       </button>
     </nav>
   );

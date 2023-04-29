@@ -15,7 +15,6 @@ const fadeIn = keyframes`
 `;
 
 const GobalWrapper = styled.div`
-  width: 240px;
   height: auto;
   margin: 20px auto;
   border-radius: 5px;
@@ -36,6 +35,7 @@ const DropDownSeen = styled.div`
 const Title = styled.h2`
   font-size: 13px;
   font-weight: 500;
+  margin: 0;
 `;
 const ArrowImg = styled.img`
   width: 8.98px;
