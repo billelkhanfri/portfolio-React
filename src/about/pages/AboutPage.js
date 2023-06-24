@@ -15,9 +15,12 @@ function AboutPage() {
       <PageHeader> </PageHeader>
       <Hero></Hero>
       <About></About>
-      <Separator title="Education"></Separator>
+
+      <Separator title="Experience" color="var(--primary-color)"></Separator>
 
       <Timeline></Timeline>
+      <Separator title="Education" color="var(--bs-blue)"></Separator>
+      <Education></Education>
       <Footer></Footer>
     </>
   );

@@ -9,7 +9,7 @@ function Hero() {
     <Container fluid className="hero">
       <Row>
         <Col md={6} className="hero-text">
-          <div>
+          <div className="left-text">
             <h3>Salut, je suis</h3>
             <h1>Billel KHANFRI</h1>
             <p>Développeur Frontend </p>

@@ -4,7 +4,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { IoSchoolSharp } from "react-icons/io5";
+
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import timelineData from "../timeline.json";
 
 const Timeline = () => {
@@ -15,15 +16,23 @@ const Timeline = () => {
         <VerticalTimelineElement
           key={event.id}
           date={event.date}
-          icon={<IoSchoolSharp className="icon" />}
+          dateClassName="vertical-timeline-element-date"
+          icon={<AiOutlineFundProjectionScreen className="icon" />}
           iconStyle={schoolStyle}
         >
           <h3 className="vertical-timeline-element-title">{event.title}</h3>
-          <p>{event.description}</p>
+          <div className="vertical-timeline-element-description">
+            {" "}
+            {event.description}
+          </div>
+
           <div>
-            <a href="#" className="btn btn-primary ">
+            <button
+              className=" btn btn-experience btn-primary"
+              onClick={event.onClick}
+            >
               {event.buttonText}
-            </a>
+            </button>
           </div>
         </VerticalTimelineElement>
       ))}

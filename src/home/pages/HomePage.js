@@ -8,7 +8,7 @@ import Separator from "../../common/components/Separator";
 import Skills from "../components/Skills";
 import Competences from "../components/Competences";
 import Learning from "../components/Learning";
-import Ligne from "../../common/components/Ligne";
+//import Ligne from "../../common/components/Ligne";
 import Footer from "../../common/components/Footer";
 
 function HomePage() {
@@ -23,10 +23,11 @@ function HomePage() {
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
       <Banner></Banner>
-      <Separator title="SKILLS"></Separator>
+      <Separator title="SKILLS" color="var(--primary-color)"></Separator>
       <Competences></Competences>
       <Learning></Learning>
-      <Ligne></Ligne>
+      {/*<Ligne></Ligne>*/}
+      <Separator title="Niveau" color="var(--primary-color)"></Separator>
       <div className="bar-wrapper">
         <Skills value={75} label="HTML" barColor="success" />
         <Skills value={50} label="CSS" barColor="warning" />

@@ -27,7 +27,6 @@ const Banner = () => {
       className="banner"
       style={{ backgroundImage: `url(${images[index]})` }}
     >
-      <div className="overlay"></div>
       <div className="content">
         <h1>
           {" "}
